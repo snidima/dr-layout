@@ -1,0 +1,67 @@
+extends ./layout/main
+
+block title
+    title Main page
+
+block script
+    script.
+        $('.ui.checkbox')
+                .checkbox()
+        ;
+        $('.ui.rating')
+                .rating({
+                    initialRating: 3,
+                    maxRating: 5
+                })
+        ;
+        $('.tabular.menu .item').tab();
+block content
+    .ui.container
+        .ui.breadcrumb
+            a.section Главная
+            .divider  /
+            .active.section Автошкола такая-то
+        .ui.stacked.segment
+            .detail
+                .detail__logo
+                    img(src="http://cn15.nevsedoma.com.ua/photo/9/994/242_files/flint-11.jpg")
+                .detail__info
+                    .detail__title
+                        | Драйв Мастер
+                        .search-itle__icon
+                            i.certificate.icon
+                    .detail__cats
+                        span Подготовка пог категориям
+                        a.ui.orange.circular.label.mini A
+                        a.ui.orange.circular.label.mini A
+                        a.ui.orange.circular.label.mini A
+                    .detail__desc
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                .detail__other
+                    .ui.star.mini.rating(data-rating='4')
+                    small (20 Отзывов)
+                    button.ui.primary.mini.button.disabled Задать вопрос
+
+            .ui.divider
+            .row
+                .col-md-3
+                    img(src="http://inostranno.ru/wp-content/uploads/2014/09/Google-Maps-1200x626.jpg")
+                    br
+                    p
+                        b Контакты
+                        br
+                        | Телефон: +79888888 <br>
+                        | email: mail@mail.ru
+
+                    p
+                        b Адрес
+                        br
+                        | Телефон: +79888888 <br>
+                        | email: mail@mail.ru
+                    p
+                        b Филиалы
+                        br
+                        | Телефон: +79888888 <br>
+                        | email: mail@mail.ru
+                .col-md-9 123

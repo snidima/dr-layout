@@ -1,0 +1,57 @@
+extends ./layout/main
+
+block title
+    title Main page
+block script
+    script.
+        $('.ui.dropdown').dropdown();
+        var content = [
+            {title: 'Andorra'},
+            {title: 'United Arab Emirates'},
+            {title: 'Afghanistan'},
+            {title: 'Antigua'},
+            {title: 'Anguilla'},
+            {title: 'Albania'},
+            {title: 'Armenia'},
+            {title: 'Netherlands Antilles'},
+            {title: 'Angola'},
+            {title: 'Argentina'},
+            {title: 'American Samoa'},
+            {title: 'Austria'},
+            {title: 'Australia'},
+            {title: 'Aruba'},
+            {title: 'Aland Islands'},
+            {title: 'Azerbaijan'},
+            {title: 'Bosnia'},
+            {title: 'Barbados'},
+            {title: 'Bangladesh'},
+            {title: 'Belgium'},
+            {title: 'Burkina Faso'},
+            {title: 'Bulgaria'},
+            {title: 'Bahrain'},
+            {title: 'Burundi'}
+            // etc
+        ];
+        $('.ui.search').search({
+                    source: content
+                });
+
+block content
+    .main-search-block-wrapper.gray
+        .main-search-block
+            .main-search-block__item
+                .ui.search
+                    .ui.icon.input
+                        input.prompt(type='text', placeholder='Кого?')
+                    .results
+
+            .main-search-block__item
+                .ui.search
+                    .ui.icon.input
+                        input.prompt(type='text', placeholder='Где?')
+                    .results
+            .main-search-block__item
+                a(href="/list.html").ui.icon.button
+                    i.search.icon
+                    | Найти
+

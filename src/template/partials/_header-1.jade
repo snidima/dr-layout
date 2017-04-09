@@ -1,0 +1,55 @@
+div.header-wrapper
+    .ui.container
+        .menu
+            .menu__item.menu__logo
+                a(href="/index.html") Drive Planner
+            .menu__item.menu-search
+                .ui.category.search.half.menu-search__item
+                    .ui.icon.mini.input
+                        input.prompt(type='text', placeholder='Начните набирать')
+                        .input-half
+                            .ui.dropdown.link.item
+                                span.text Кого
+                                i.dropdown.icon
+                                .menu
+                                    .item Автошкола
+                                    .item Частный инструктор
+                                    .item Не важно
+                    .results
+                .ui.category.search.half.menu-search__item
+                    .ui.icon.mini.input
+                        input.prompt(type='text', placeholder='Начните набирать')
+                        .input-half
+                            .ui.dropdown.link.item
+                                span.text Где
+                                i.dropdown.icon
+                                .menu
+                                    .item Автошкола
+                                    .item Частный инструктор
+                                    .item Не важно
+                    .results
+                .menu-search__item
+                    button.ui.blue.mini.button
+                        i.ui.search.icon
+                        | Найти
+            .menu__item.menu-user
+                .ui.dropdown
+                    span Иван Иванов
+                    i.dropdown.icon
+                    .menu
+                        .item
+                            i.ui.setting.icon
+                            | Настройки
+                        .item
+                            i.ui.calendar.icon
+                            | Расписание
+                        .item
+                            i.ui.payment.icon
+                            | Платежи и отчеты
+                        .item
+                            i.ui.comments.outline.icon
+                            | Связь
+                        .divider
+                        .item
+                            i.ui.sign.out.outline.icon
+                            | Выйти

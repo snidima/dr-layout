@@ -1,0 +1,84 @@
+extends ./layout/main
+
+block title
+    title Main page
+
+block script
+    script.
+        $('.ui.checkbox')
+                .checkbox()
+        ;
+        $('.ui.rating')
+                .rating({
+                    initialRating: 3,
+                    maxRating: 5
+                })
+        ;
+        $('.tabular.menu .item').tab();
+block content
+    .ui.container
+        .ui.breadcrumb
+            a.section Главная
+            .divider  /
+            .active.section Результат поиска
+
+    .gray
+        .ui.container
+            .row
+                .col-md-3
+                    .ui.horizontal.divider
+                        | Пол
+                    .ui.form
+                        .inline.field
+                            .ui.checkbox
+                                input.hidden(type='checkbox', tabindex='0')
+                                label Мужчины
+                        .inline.field
+                            .ui.checkbox
+                                input.hidden(type='checkbox', tabindex='0')
+                                label Женщины
+                        .inline.field
+                            .ui.checkbox
+                                input.hidden(type='checkbox', tabindex='0')
+                                label Не важно
+                    .ui.horizontal.divider
+                        | Цена
+
+
+                .col-md-7
+                    .search-items-wrapper
+                        .search-items
+                            - for (var i = 0; i < 5; ++i)
+                                .search-items__item
+                                    .search-item__img
+                                        img(src="http://cn15.nevsedoma.com.ua/photo/9/994/242_files/flint-11.jpg")
+                                    .search-item__text
+                                        .search-item__title
+                                            .search-itle__text Иван Инванов
+                                            .search-itle__icon
+                                                i.certificate.icon
+
+                                        .search-item__rate
+                                            .ui.star.mini.rating(data-rating='4')
+                                            small (20 Отзывов)
+                                        .search-item__cats
+                                            small Подготовка по катгеориям:
+                                            a.ui.orange.circular.label.mini A
+                                            a.ui.orange.circular.label.mini B
+                                            a.ui.orange.circular.label.mini C
+                                        .search-item__desc
+                                            | Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                                        .search-item-actions
+                                            a(href="detail.html").ui.primary.basic.tiny.button Подробнее..
+
+
+
+
+
+
+
+
+                .col-md-2
+
+
+
